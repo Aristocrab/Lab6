@@ -20,7 +20,7 @@ GET
 - `page`: Ціле число, яке визначає номер сторінки результатів пошуку.
 
 **Приклад запиту:**
-`https://api.themoviedb.org/3/search/movie?query=Django&include_adult=false&language=en-US&page=1&api_key=YOUR_KEY`
+`https://api.themoviedb.org/3/search/movie?query=Django%2520Unchained&include_adult=false&language=uk-UA&page=1&api_key=YOUR_KEY`
 
 ### Відповідь
 ```json
@@ -29,31 +29,33 @@ GET
   "results": [
     {
       "adult": false,
-      "backdrop_path": "/ndyPYfC9pku11YsCDEKsLJY1M1r.jpg",
-      "genre_ids": [18, 36, 37],
-      "id": 271110,
+      "backdrop_path": "/2oZklIzUbvZXXzIFzv7Hi68d6xf.jpg",
+      "genre_ids": [
+        18,
+        37
+      ],
+      "id": 68718,
       "original_language": "en",
       "original_title": "Django Unchained",
-      "overview": "With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",
-      "popularity": 42.824,
-      "poster_path": "/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
+      "overview": "Фільм розповість історію звільненого раба Джанґо, який допомагає мисливцю за головами доктору Кінґу Шульцу, німцеві за національністю. Шульц, противник рабства, виручив Джанґо з важкої ситуації і тепер навчає його своєму ремеслу. Колишній раб розраховує на допомогу Шульца у вельми важкій справі - головний герой фільму жадає помститися жорстокому власнику плантації Келвіну Кенді, який утримує у себе дружину Джанґо.",
+      "popularity": 42.526,
+      "poster_path": "/effwvCvNGs23voTkvsDVfhkNJea.jpg",
       "release_date": "2012-12-25",
-      "title": "Django Unchained",
+      "title": "Джанґо вільний",
       "video": false,
-      "vote_average": 8.2,
-      "vote_count": 22176
-    }
+      "vote_average": 8.165,
+      "vote_count": 24129
+    },
+    ...
   ],
-  "total_pages": 1
-
-,
-  "total_results": 1
+  "total_pages": 1,
+  "total_results": 3
 }
 ```
 
 ## 2. Опис прикладу застосування API
 
-Приклад виклику API з функції JS
+### Приклад виклику API з функції JS
 ```js
 async function SearchMovieByName(query) {
     // Формується URL 
@@ -73,7 +75,7 @@ async function SearchMovieByName(query) {
     return result;
 }
 ```
-Фрагмент використання цієї функції і даних, що вона повертає
+### Фрагмент використання цієї функції і даних, що вона повертає
 ```js
 async function Search(event) {
     ...
@@ -96,5 +98,6 @@ async function Search(event) {
 }
 ```
 
-Приклад на сайті
+### Приклад на сайті
+
 ![](https://i.imgur.com/nejrUIQ.png)
