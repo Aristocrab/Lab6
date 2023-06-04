@@ -1,4 +1,4 @@
-# Lab6
+# Lab6 [[Посилання на сайт]](https://aristocrab.github.io/Lab6/)
 
 ## 1. Опис сценарію використання API зовнішнього застосування
 Як зовнішній сервіс було обрано API [The Movie Database (TMDB)](https://developer.themoviedb.org/reference/intro/getting-started)
@@ -20,7 +20,7 @@ GET
 - `page`: Ціле число, яке визначає номер сторінки результатів пошуку.
 
 **Приклад запиту:**
-`https://api.themoviedb.org/3/search/movie?query=Django&include_adult=false&language=en-US&page=1`
+`https://api.themoviedb.org/3/search/movie?query=Django&include_adult=false&language=en-US&page=1&api_key=YOUR_KEY`
 
 ### Відповідь
 ```json
